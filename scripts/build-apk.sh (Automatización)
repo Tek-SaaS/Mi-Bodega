@@ -1,0 +1,41 @@
+```bash
+#!/bin/bash
+
+# Script para compilar, firmar y mover la APK de Mi Bodega
+
+echo "🚀 Iniciando compilación de Mi Bodega..."
+
+# 1. Limpiar proyecto
+echo "📦 Limpiando proyecto..."
+cd ../android
+./gradlew clean
+
+# 2. Compilar en modo Release
+echo "🔨 Compilando APK Release..."
+./gradlew assembleRelease
+
+# 3. Verificar que la APK se generó
+APK_PATH="app/build/outputs/apk/release/app-release.apk"
+if [ -f "$APK_PATH" ]; then
+    echo "✅ APK generada exitosamente"
+else
+    echo "❌ Error: No se generó la APK"
+    exit 1
+fi
+
+# 4. Copiar a la carpeta de releases
+echo "📋 Copiando APK a la carpeta de releases..."
+cp "$APK_PATH" "../apk/mibodega-v1.0.0-release.apk"
+
+# 5. Generar SHA256
+echo "🔐 Generando hash SHA256..."
+shasum -a 256 "../apk/mibodega-v1.0.0-release.apk" > "../apk/mibodega-v1.0.0-release.sha256"
+
+# 6. Copiar al sitio web
+echo "🌐 Copiando al sitio web..."
+cp "$APK_PATH" "../website/assets/downloads/mibodega-v1.0.0.apk"
+
+echo "✅ ¡Compilación completada exitosamente!"
+echo "📱 APK en: apk/mibodega-v1.0.0-release.apk"
+echo "🌐 Sitio web actualizado"
+```
