@@ -1,0 +1,49 @@
+```javascript
+const express = require('express');
+const cors = require('cors');
+const path = require('path');
+const fs = require('fs');
+require('dotenv').config();
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+app.use(cors());
+app.use(express.json());
+app.use(express.static(path.join(__dirname, '../website')));
+
+// Endpoint de descarga
+app.get('/api/download', (req, res) => {
+    const statsPath = path.join(__dirname, 'data', 'downloads.json');
+    let stats = { downloads: 0 };
+    if (fs.existsSync(statsPath)) {
+        stats = JSON.parse(fs.readFileSync(statsPath));
+    }
+    stats.downloads += 1;
+    fs.writeFileSync(statsPath, JSON.stringify(stats, null, 2));
+    res.redirect('/assets/downloads/mibodega-v1.0.0.apk');
+});
+
+// Endpoint de versión
+app.get('/api/version', (req, res) => {
+    res.json({ 
+        version: '1.0.0', 
+        releaseDate: '2026-06-26',
+        minRequired: '1.0.0'
+    });
+});
+
+// Endpoint de estadísticas
+app.get('/api/stats', (req, res) => {
+    const statsPath = path.join(__dirname, 'data', 'downloads.json');
+    let stats = { downloads: 0 };
+    if (fs.existsSync(statsPath)) {
+        stats = JSON.parse(fs.readFileSync(statsPath));
+    }
+    res.json(stats);
+});
+
+app.listen(PORT, () => {
+    console.log(`Mi Bodega backend running on port ${PORT}`);
+});
+```
