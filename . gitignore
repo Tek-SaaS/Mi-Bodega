@@ -1,0 +1,30 @@
+# Android
+*.jks
+*.key
+android/app/build/
+android/.gradle/
+android/local.properties
+android/*.iml
+android/captures/
+android/.externalNativeBuild/
+
+# Backend
+backend/node_modules/
+backend/.env
+backend/data/downloads.json
+
+# Sistema
+.DS_Store
+*.log
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Temporales
+*.tmp
+*.temp
+thumbs.db
+
+# Imágenes locales (solo ejemplos en assets)
+android/app/src/main/assets/images/
