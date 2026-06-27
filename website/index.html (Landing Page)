@@ -1,0 +1,134 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Bodega - Gestión de Inventario y Construcción Offline</title>
+    <meta name="description" content="Sistema MRP offline para gestionar materiales, construir ítems y controlar stock. Totalmente personalizable sin conexión a internet.">
+    <link rel="icon" href="/assets/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="/assets/img/logo.png" alt="Mi Bodega">
+                <span>Mi Bodega</span>
+            </div>
+            <ul>
+                <li><a href="#features">Características</a></li>
+                <li><a href="#download">Descargar</a></li>
+                <li><a href="/pages/support.html">Soporte</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Mi Bodega</h1>
+            <p>Gestiona tu inventario, construye ítems y controla el stock sin conexión a internet</p>
+            <a href="/api/download" class="btn-download">
+                📲 Descargar APK v1.0.0
+            </a>
+            <span class="download-count">📦 <span id="downloadCount">0</span> descargas</span>
+        </div>
+        <div class="hero-image">
+            <img src="/assets/img/hero-bg.jpg" alt="Mi Bodega App">
+        </div>
+    </section>
+
+    <section id="features">
+        <h2>Características Principales</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="icon">📦</div>
+                <h3>Inventario de Materiales</h3>
+                <p>Gestiona tus materiales con nombres, fotos y cantidades personalizadas</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">🔨</div>
+                <h3>Construcción de Ítems</h3>
+                <p>Construye ítems usando recetas (BOM) y asigna códigos únicos manuales</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">📋</div>
+                <h3>Stock Trazable</h3>
+                <p>Controla cada ítem construido con estado, ubicación, notas e historial</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">🖼️</div>
+                <h3>Completamente Personalizable</h3>
+                <p>Cambia nombres y fotos de materiales e ítems según tu necesidad</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">📴</div>
+                <h3>100% Offline</h3>
+                <p>Funciona sin conexión a internet. Tus datos siempre están contigo</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">📊</div>
+                <h3>Trazabilidad Completa</h3>
+                <p>Historial de cambios, materiales usados y movimiento de inventario</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="screenshots">
+        <h2>Capturas de Pantalla</h2>
+        <div class="screenshot-gallery">
+            <img src="/assets/img/screenshot-1.png" alt="Pantalla de inventario">
+            <img src="/assets/img/screenshot-2.png" alt="Pantalla de construcción">
+            <img src="/assets/img/screenshot-3.png" alt="Pantalla de stock">
+        </div>
+    </section>
+
+    <section id="download">
+        <h2>Descarga Mi Bodega</h2>
+        <div class="download-container">
+            <div class="download-info">
+                <h3>Versión 1.0.0</h3>
+                <p>📅 26 de Junio de 2026</p>
+                <p>📦 Tamaño: ~8 MB</p>
+                <p>📱 Android 7.0 (API 24) o superior</p>
+                <a href="/api/download" class="btn-download-large">
+                    📲 Descargar APK
+                </a>
+                <p class="hash">SHA256: <span id="sha256">abc123def456...</span></p>
+            </div>
+            <div class="install-steps">
+                <h4>Instrucciones de Instalación</h4>
+                <ol>
+                    <li>Habilita "Instalar desde fuentes desconocidas" en Ajustes → Seguridad</li>
+                    <li>Descarga el archivo APK</li>
+                    <li>Abre el archivo y presiona "Instalar"</li>
+                    <li>¡Listo! La app incluye datos de ejemplo para empezar</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="/assets/img/logo.png" alt="Mi Bodega">
+                <span>Mi Bodega</span>
+            </div>
+            <div class="footer-links">
+                <a href="/pages/privacy.html">Política de Privacidad</a>
+                <a href="/pages/terms.html">Términos de Uso</a>
+                <a href="/pages/support.html">Soporte</a>
+            </div>
+            <div class="footer-copy">
+                <p>© 2026 Mi Bodega - Todos los derechos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+    <script src="/js/download.js"></script>
+    <script src="/js/analytics.js"></script>
+</body>
+</html>
+```
